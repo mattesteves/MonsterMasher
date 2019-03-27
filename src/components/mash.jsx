@@ -4,7 +4,7 @@ class Mash extends Component {
   render() {
     return (
       <div id="main_mash">
-        <h2>Monster Masher</h2>
+        <h2 id="title">Monster Masher</h2>
         {this.props.goo === 0 ? <p>Mash Monsters to make goo!</p> : <br />}
 
         <h3>Goo: {this.props.goo} gU </h3>

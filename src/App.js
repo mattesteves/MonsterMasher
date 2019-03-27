@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Mash from './components/mash';
-import './App.css';
+import './styles/App.css';
 
 class App extends Component {
   constructor(props) {

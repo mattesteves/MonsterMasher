@@ -1,0 +1,15 @@
+body {
+  color: white;
+  background-color: midnightblue;
+}
+
+#title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+}
+
+#main_mash {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
