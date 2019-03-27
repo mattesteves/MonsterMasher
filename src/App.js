@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Mash from './components/mash';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      goo: 0,
+      gooMod: 1,
+      autoGooMod: 1
+    };
+  }
+  mash = () => {
+    let newGoo = this.state.goo + this.state.gooMod;
+    this.setState({ goo: newGoo });
+  };
+
+  automash = () => {
+    setInterval(() => {
+      let autoGoo = this.state.goo + this.state.autoGooMod;
+      this.setState({ goo: autoGoo });
+    }, 1000);
+  };
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Mash goo={this.state.goo} mash={this.mash} automash={this.automash} />
     );
   }
 }
