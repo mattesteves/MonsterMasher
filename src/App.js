@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       goo: 0,
       gooMod: 1,
-      autoGooMod: 0.1
+      autoGooMod: 0
     };
   }
   mash = () => {
@@ -17,16 +17,12 @@ class App extends Component {
     this.setState({ goo: newGoo });
   };
 
-  autoMash = status => {
+  autoMash = () => {
     let mashInterval;
-    if (status === 'yes') {
-      mashInterval = setInterval(() => {
-        let autoGoo = this.state.goo + this.state.autoGooMod;
-        this.setState({ goo: autoGoo });
-      }, 1000);
-    } else {
-      clearInterval(mashInterval);
-    }
+    mashInterval = setInterval(() => {
+      let autoGoo = this.state.goo + this.state.autoGooMod;
+      this.setState({ goo: autoGoo });
+    }, 1000);
   };
 
   modIncrease = (mod, num) => {
@@ -41,6 +37,7 @@ class App extends Component {
         mash={this.mash}
         autoMash={this.autoMash}
         modIncrease={this.modIncrease}
+        autoGooMod={this.state.autoGooMod}
       />
     );
   }
