@@ -10,13 +10,7 @@ class Mash extends Component {
   }
 
   autoMashPress = () => {
-    if (this.state.automash === true) {
-      this.setState({ autoMash: false });
-      this.props.autoMash('no');
-    } else {
-      this.setState({ autoMash: true });
-      this.props.autoMash('yes');
-    }
+    this.setState({ autoMash: true });
   };
 
   gooRound = () => {
@@ -36,7 +30,7 @@ class Mash extends Component {
           Mash 'em
         </button>
         <br />
-        {this.props.goo >= 20 ? (
+        {this.props.goo >= 20 && this.state.autoMash === false ? (
           <button id="automash" onClick={this.autoMashPress}>
             Automash{' '}
             {this.state.autoMashCount > 0
