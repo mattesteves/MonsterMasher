@@ -44,6 +44,12 @@ class Mash extends Component {
         ) : (
           <br />
         )}
+
+        {this.state.autoMash === true ? (
+          <button id="upgrade_automasher">Upgrade Automasher</button>
+        ) : (
+          ''
+        )}
       </div>
     );
   }
