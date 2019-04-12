@@ -26,7 +26,12 @@ class Mash extends Component {
         {this.props.goo === 0 ? <p>Mash Monsters to make goo!</p> : <br />}
 
         <h3>
-          Goo: {this.gooRound()} gU, GPS: {this.props.autoGooMod}{' '}
+          Goo: {this.gooRound()} gU{' '}
+          {this.props.autoGooMod > 0 ? (
+            <span>GPS: {this.props.autoGooMod}</span>
+          ) : (
+            ''
+          )}
         </h3>
         <button id="mash" onClick={this.props.mash}>
           Mash 'em
@@ -34,12 +39,7 @@ class Mash extends Component {
         <br />
         {this.props.goo >= 20 && this.state.autoMash === false ? (
           <button id="automash" onClick={this.autoMashPress}>
-            Automash{' '}
-            {this.state.autoMashCount > 0 ? (
-              '+ ' + this.state.autoMashCount
-            ) : (
-              <button>Upgrade AutoMasher</button>
-            )}
+            Automash
           </button>
         ) : (
           <br />
