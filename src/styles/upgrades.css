@@ -1,0 +1,9 @@
+.upgrade_label {
+  background-color: rgb(128, 0, 43);
+  margin: 20px;
+  margin-right: 50px;
+  box-shadow: -5px 3px rgb(82, 2, 29);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 1em;
+}

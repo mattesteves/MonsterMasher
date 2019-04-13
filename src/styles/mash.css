@@ -15,3 +15,7 @@ button:active {
   transform: translateY(2px);
   box-shadow: 0 2px rgb(5, 92, 5);
 }
+
+#upgrade_automasher {
+  font-size: 0.8rem;
+}

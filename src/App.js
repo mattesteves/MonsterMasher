@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Mash from './components/mash';
+import Upgrades from './components/upgrades';
 
 import './styles/App.css';
 
@@ -32,13 +33,30 @@ class App extends Component {
 
   render() {
     return (
-      <Mash
-        goo={this.state.goo}
-        mash={this.mash}
-        autoMash={this.autoMash}
-        modIncrease={this.modIncrease}
-        autoGooMod={this.state.autoGooMod}
-      />
+      <div id="flex-container">
+        <div class="flex_row">
+          <div class="spacer" />
+          <h2 id="title">Monster Masher</h2>
+          <div class="spacer">
+            <div class="upgrade_label">UPGRADES</div>
+          </div>
+        </div>
+        <div class="flex_row">
+          <div class="spacer" />
+          <div id="mash_frame">
+            <Mash
+              goo={this.state.goo}
+              mash={this.mash}
+              autoMash={this.autoMash}
+              modIncrease={this.modIncrease}
+              autoGooMod={this.state.autoGooMod}
+            />
+          </div>
+          <div id="upgrades_frame">
+            <Upgrades />
+          </div>
+        </div>
+      </div>
     );
   }
 }

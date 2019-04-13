@@ -1,15 +1,35 @@
 body {
   color: white;
-  background-color: midnightblue;
+  background-color: rgb(59, 28, 100);
+  text-align: center;
 }
 
 #title {
   font-family: 'Fredoka One', cursive;
+  /* text-align: center; */
   font-size: 3rem;
+  flex: 3;
 }
 
 #main_mash {
-  width: 80%;
   text-align: center;
-  margin: auto;
+}
+
+#flex_container {
+  width: 90%;
+}
+.flex_row {
+  display: flex;
+}
+
+#mash_frame {
+  flex: 3;
+}
+
+#upgrades_frame {
+  flex: 1;
+}
+
+.spacer {
+  flex: 1;
 }
