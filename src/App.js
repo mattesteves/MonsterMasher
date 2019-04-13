@@ -47,13 +47,16 @@ class App extends Component {
             <Mash
               goo={this.state.goo}
               mash={this.mash}
-              autoMash={this.autoMash}
-              modIncrease={this.modIncrease}
-              autoGooMod={this.state.autoGooMod}
+              gooMod={this.state.gooMod}
             />
           </div>
           <div id="upgrades_frame">
-            <Upgrades />
+            <Upgrades
+              autoMash={this.autoMash}
+              goo={this.state.goo}
+              autoGooMod={this.state.autoGooMod}
+              modIncrease={this.modIncrease}
+            />
           </div>
         </div>
       </div>
